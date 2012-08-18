@@ -57,8 +57,16 @@ public class PowerMenu extends SettingsPreferenceFragment {
                 Settings.System.POWER_MENU_SCREENSHOT_ENABLED, 0) == 1));
 
         mExpandedDesktopPref = (CheckBoxPreference) findPreference(KEY_EXPANDED_DESKTOP);
-        mExpandedDesktopPref.setChecked((Settings.System.getInt(getContentResolver(),
+        boolean showExpandedDesktopPref = 
+            getResources().getBoolean(R.bool.config_show_expandedDesktop);
+        if (!showExpandedDesktopPref) {
+            if (mExpandedDesktopPref != null) {
+                getPreferenceScreen().removePreference(mExpandedDesktopPref);
+            }
+        } else {
+            mExpandedDesktopPref.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 0) == 1));
+        }
 
         mProfilesPref = (CheckBoxPreference) findPreference(KEY_PROFILES);
         mProfilesPref.setChecked((Settings.System.getInt(getContentResolver(),
