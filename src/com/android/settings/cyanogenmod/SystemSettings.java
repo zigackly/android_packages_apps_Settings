@@ -60,15 +60,8 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         mPhoneDrawer = (PreferenceScreen) findPreference(KEY_NOTIFICATION_DRAWER);
         mTabletDrawer = (PreferenceScreen) findPreference(KEY_NOTIFICATION_DRAWER_TABLET);
 
-        if (Utils.isTablet(getActivity())) {
-            if (mPhoneDrawer != null) {
-                getPreferenceScreen().removePreference(mPhoneDrawer);
-            }
-        } else {
-            if (mTabletDrawer != null) {
-                getPreferenceScreen().removePreference(mTabletDrawer);
-            }
-        }
+        // Force Tablet UI Settings only
+        getPreferenceScreen().removePreference(mPhoneDrawer);
 
         IWindowManager windowManager = IWindowManager.Stub.asInterface(
                 ServiceManager.getService(Context.WINDOW_SERVICE));
