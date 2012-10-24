@@ -118,7 +118,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
         mTabletUIEnabled = (CheckBoxPreference) prefSet.findPreference(TABLET_UI_ENABLED);
         mTabletUIEnabled.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                Settings.System.TABLET_UI_ENABLED, 0) == 1));
+            Settings.System.TABLET_UI_ENABLED, 1) == 1));
 
         mPrefCategoryGeneral = (PreferenceCategory) findPreference(STATUS_BAR_CATEGORY_GENERAL);
 
