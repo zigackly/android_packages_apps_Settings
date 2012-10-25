@@ -299,7 +299,7 @@
     <string name="owner_info_settings_title" msgid="2723190010708381889">"Info zum Eigentümer"</string>
     <string name="owner_info_settings_summary" msgid="3800834657847339570"></string>
     <string name="owner_info_settings_edit_text_hint" msgid="4608681417960923911">"Text für Display-Sperre eingeben"</string>
-    <string name="location_settings_title" msgid="8935806698251432196">"Standortdienste"</string>
+    <string name="location_settings_title" msgid="4483843407328665068">"Standortzugriff"</string>
     <string name="security_settings_title" msgid="7945465324818485460">"Sicherheit"</string>
     <string name="security_settings_summary" msgid="967393342537986570">"Meinen Standort, Display-Entsperrung, SIM-Kartensperre und Sperre für Anmeldeinformationsspeicher festlegen"</string>
     <string name="cdma_security_settings_summary" msgid="6068799952798901542">"Meinen Standort, Display-Entsperrung, SIM-Kartensperrung und Sperrung des Anmeldeinformationsspeichers festlegen"</string>
@@ -665,7 +665,7 @@
     <string name="search_settings" msgid="1910951467596035063">"Suche"</string>
     <string name="search_settings_summary" msgid="9205656546570654169">"Sucheinstellungen und Suchverlauf verwalten"</string>
     <string name="display_settings" msgid="7965901687241669598">"Display"</string>
-    <string name="accelerometer_title" msgid="7854608399547349157">"Display autom. drehen"</string>
+    <string name="accelerometer_title" msgid="7854608399547349157">"Automatisch drehen"</string>
     <string name="accelerometer_summary_on" product="tablet" msgid="429982132339828942">"Ausrichtung beim Drehen des Tablets automatisch ändern"</string>
     <string name="accelerometer_summary_on" product="default" msgid="1133737282813048021">"Ausrichtung beim Drehen des Telefons automatisch ändern"</string>
     <string name="accelerometer_summary_off" product="tablet" msgid="4781734213242521682">"Ausrichtung beim Drehen des Tablets automatisch ändern"</string>
@@ -900,11 +900,12 @@
     <string name="tethering_help_button_text" msgid="656117495547173630">"Hilfe"</string>
     <string name="network_settings_title" msgid="7967552516440151852">"Mobilfunknetze"</string>
     <string name="location_title" msgid="1029961368397484576">"Mein Standort"</string>
-    <string name="location_network_based" msgid="5569673665032992664">"Standortdienst von Google"</string>
-    <string name="location_neighborhood_level" msgid="2948129720516513300">"Anonyme Standortdaten dürfen an Google gesendet werden. Außerdem können bestimmte Apps Daten aus Quellen wie WLAN und Mobilfunknetzen für die Bestimmung des ungefähren Standorts nutzen."</string>
+    <string name="location_network_based" msgid="7472814266821714527">"WLAN- und Mobilfunknetz-Standort"</string>
+    <string name="location_neighborhood_level" msgid="5626515380188353712">"Apps können Ihren Standort mit dem Google-Standortdienst schneller bestimmen. Anonyme Standortdaten werden erfasst und an Google gesendet."</string>
     <string name="location_neighborhood_level_wifi" msgid="7457348712272184793">"Standort per WLAN bestimmt"</string>
     <string name="location_gps" msgid="8392461023569708478">"GPS-Satelliten"</string>
-    <string name="location_street_level" msgid="4244496898967415234">"Apps dürfen meinen Standort mithilfe von GPS bestimmen."</string>
+    <string name="location_street_level" product="tablet" msgid="1669562198260860802">"Apps dürfen Ihren Standort mithilfe von GPS auf Ihrem Tablet bestimmen."</string>
+    <string name="location_street_level" product="default" msgid="4617445745492014203">"Apps dürfen Ihren Standort mithilfe von GPS auf Ihrem Telefon bestimmen."</string>
     <string name="assisted_gps" msgid="4649317129586736885">"Unterstütztes GPS verwenden"</string>
     <string name="assisted_gps_enabled" msgid="8751899609589792803">"Server zur Unterstützung von GPS verwenden (zur Verringerung der Netzwerkauslastung nicht auswählen)"</string>
     <string name="assisted_gps_disabled" msgid="6982698333968010748">"Server zur Unterstützung von GPS verwenden (zur Verbesserung der GPS-Leistung deaktivieren)"</string>
@@ -915,7 +916,10 @@
     <string name="location_gps_source_notification">Nach dem Wechsel der GPS-Quelle wurde GPS deaktiviert und muss vor erneuter Benutzung reaktiviert werden.</string>
 
     <string name="use_location_title" msgid="5206937465504979977">"Standort &amp; Google-Suche"</string>
-    <string name="use_location_summary" msgid="3978805802386162520">"Google darf Suchergebnisse und andere Dienste an meinen Standort anpassen."</string>
+    <string name="use_location_summary" msgid="3978805802386162520">"Google darf Suchergebnisse und andere Dienste an meinen Standort anpassen"</string>
+    <string name="location_access_title" msgid="7064108942964081243">"Zugriff auf meinen Standort"</string>
+    <string name="location_access_summary" msgid="69031404093194341">"Apps, die Sie um die entsprechende Berechtigung gebeten haben, können Ihre Standortinformationen verwenden."</string>
+    <string name="location_sources_heading" msgid="1278732419851088319">"Standortquellen"</string>
     <string name="about_settings" product="tablet" msgid="593457295516533765">"Über das Tablet"</string>
     <string name="about_settings" product="default" msgid="1743378368185371685">"Über das Telefon"</string>
     <string name="about_settings_summary" msgid="3371517697156165959">"Rechtliche Hinweise, Status und Softwareversion anzeigen"</string>
@@ -964,7 +968,7 @@
     <string name="lockpattern_settings_enable_summary" msgid="1165707416664252167">"Zum Entsperren muss ein Muster gezeichnet werden"</string>
     <string name="lockpattern_settings_enable_visible_pattern_title" msgid="2615606088906120711">"Muster sichtbar machen"</string>
     <!-- Security & location settings screen, setting check box title. This setting controls whether a visible red line will be drawn after the user has drawn the unlock pattern incorrectly.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
-    <string name="lockpattern_settings_enable_error_path_title">Fehlerhaftes Entsperrungsmuster anzeigen</string>
+    <string name="lockpattern_settings_enable_error_path_title">Fehler anzeigen</string>
     <!-- Security & location settings screen, setting check box title. This setting controls whether the dots will be drawn when using the lockscreen pattern.-->
     <string name="lockpattern_settings_enable_dots_title">Punktraster anzeigen</string>
     <string name="lockpattern_settings_enable_tactile_feedback_title" msgid="8898518337442601027">"Bei Berührung vibrieren"</string>
@@ -1210,7 +1214,7 @@
     <string name="keep_screen_on" msgid="1146389631208760344">"Aktiv lassen"</string>
     <string name="keep_screen_on_summary" msgid="2173114350754293009">"Display wird beim Laden nie in den Ruhezustand versetzt"</string>
     <string name="allow_mock_location" msgid="2787962564578664888">"Falsche Standorte"</string>
-    <string name="allow_mock_location_summary" msgid="317615105156345626">"Falsche Standorte zulassen"</string>
+    <string name="allow_mock_sms">Simulierte SMS</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"USB-Debugging zulassen?"</string>
     <string name="adb_warning_message" msgid="7316799925425402244">"USB-Debugging ist nur für Entwicklungszwecke vorgesehen. Damit können Sie Daten zwischen Ihrem Computer und Ihrem Gerät kopieren, Apps auf Ihrem Gerät ohne Benachrichtigung installieren und Protokolldaten lesen."</string>
     <string name="dev_settings_warning_title" msgid="7244607768088540165">"Entwicklungseinstellungen zulassen?"</string>
@@ -1746,7 +1750,7 @@
     <string name="end_time_title">Ende</string>
 
     <!-- Safe headset volume restore checkbox -->
-    <string name="safe_headset_restore_title">Begrenzte Kopfhörerlautstärke</string>
+    <string name="safe_headset_restore_title">Kopfhörerlautstärke</string>
     <string name="safe_headset_restore_summary">Schützt beim Einstecken des Kopfhörers vor zu hoher Lautstärke</string>
 
     <!-- Backlight -->
@@ -1884,7 +1888,8 @@
 
     <!-- Power Widget -->
     <string name="power_widget_title">Energie-Widget</string>
-    <string name="title_expanded_widget">Benachr.-Energiesteuerung</string>
+    <string name="title_expanded_widget">Energiesteuerung</string>
+    <string name="power_widget_behavior">Widget-Verhalten</string>
     <string name="title_expanded_hide_onchange">Nach Änd. verbergen</string>
     <string name="title_expanded_hide_scrollbar">Scrollbar verstecken</string>
     <string name="title_widget_picker">Schaltflächen</string>
@@ -1939,9 +1944,12 @@
     <string name="status_bar_toggle_brightness_summary">Änderung der Helligkeit durch Wischen über die Statusleiste</string>
     <string name="status_bar_toggle_info">Automatische Helligkeit ist aktiviert</string>
     <string name="status_bar_signal_text_title">Signalstärke in dBm</string>
-    <string name="status_bar_signal_text_show_bars">Nur Balken</string>
+    <string name="status_bar_style_icon">Symbol</string>
+    <string name="status_bar_style_hidden">Versteckt</string>
     <string name="status_bar_signal_text_show_text">Signalstärke (nur Wert)</string>
-    <string name="status_bar_signal_text_hidden">Versteckt</string>
+    <string name="status_bar_battery_status_percentage">Symbol &amp; Prozent</string>
+    <string name="status_bar_battery_status_circle">Kreis</string>
+    <string name="status_bar_battery_status_circle_percentage">Kreis &amp; Prozent</string>
 
     <string name="lock_screen_title">Bildschirmsperre</string>
 
@@ -2158,9 +2166,11 @@
     <string name="screen_security_summary">Einstellungen zur Sicherheitssperre, Timeouts und Abschaltverzögerungen anzeigen und ändern.</string>
     <string name="additional_options_title">Weitere Optionen</string>
     <string name="unlock_menu_unlock_title">Mit Menü entsperren</string>
-    <string name="unlock_menu_unlock_summary">Entsperren des Geräts durch Drücken der Menütaste</string>
+    <string name="unlock_menu_unlock_summary">Entsperren durch Drücken der Menü-Taste</string>
+    <string name="unlock_home_unlock_title">Mit Home entsperren</string>
+    <string name="unlock_home_unlock_summary">Entsperren durch Drücken der Home-Taste</string>
     <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
-    <string name="unlock_quick_unlock_control_summary">Entsperrt, sobald PIN oder Passwort korrekt eingegeben wurden.</string>
+    <string name="unlock_quick_unlock_control_summary">Entsperren durch korrekte PIN- oder Passworteingabe.</string>
 
     <!-- Slide lock delay -->
     <string name="delay_and_timeout_title">Sperrverzögerung</string>
@@ -2278,7 +2288,7 @@ ing system updates. -->
     <string name="display_rotation_disabled">Deaktiviert</string>
     <string name="display_rotation_unit">Grad</string>
     <string name="display_lockscreen_rotation_title">Für Sperrbildschirm übernehmen</string>
-    <string name="display_rotation_category_title">Bildschirmausrichtung bei Drehung um</string>
+    <string name="display_rotation_category_title">Bei Drehung um</string>
     <string name="display_rotation_0_title">0 Grad</string>
     <string name="display_rotation_90_title">90 Grad</string>
     <string name="display_rotation_180_title">180 Grad</string>
@@ -2384,7 +2394,7 @@ ice shows the slider widgets before the unlock option [CHAR LIMIT=28]-->
 
     <!-- Wakeup options -->
     <string name="display_category_wakeup_options_title">Aufwecken</string>
-    <string name="pref_volume_wake_title">Aufwecken mit Lautstärketaste</string>
+    <string name="pref_volume_wake_title">Lautstärketaste</string>
     <string name="pref_volume_wake_summary">Lautstärketasten wecken das Gerät und aktivieren den Bildschirm</string>
 
     <string name="ok">OK</string>
@@ -2464,5 +2474,12 @@ ice shows the slider widgets before the unlock option [CHAR LIMIT=28]-->
     <!-- CM Updater -->
     <string name="cmupdate_settings_title">CyanogenMod Updates</string>
     <string name="cmupdate_settings_summary">Auf neue Versionen prüfen und diese installieren.</string>
+
+    <!--- Sms security limit -->
+    <string name="app_security_title">App-Sicherheit</string>
+    <string name="sms_security_check_limit_title">SMS-Begrenzung</string>
+    <string name="sms_security_check_limit_summary">Momentane Begrenzung: %d Nachrichten in 15 Minuten.\nZeigt einen Alarmdialog an, um Apps daran zu hindern, häufig SMS zu verschicken.</string>
+    <string name="sms_security_check_limit_default">30 (Standard)</string>
+
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
