@@ -67,7 +67,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
         mContext = getActivity().getApplicationContext();
 
-        boolean tabletUIEnabled = (Settings.System.getInt(mContext.getContentResolver(), Settings.System.TABLET_UI_ENABLED, 0) != 0);
+        boolean tabletUIEnabled = (Settings.System.getInt(mContext.getContentResolver(), Settings.System.TABLET_UI_ENABLED, 1) != 0);
 
         if (tabletUIEnabled) {
             getPreferenceScreen().removePreference(mPhoneDrawer);
