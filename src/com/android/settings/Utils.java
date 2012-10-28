@@ -55,6 +55,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
+// Needed for execute function
+import java.io.*;
+
 public class Utils {
 
     private static final String TAG = "Utils";
@@ -534,4 +537,39 @@ public class Utils {
         return getScreenType(con) == DEVICE_TABLET;
     }
 
+    // Ported with thanks from the JellyBeer ROM
+    // https://github.com/beerbong/android_packages_apps_Settings/commit/4d6185f145fef5386c22c3f4d2a8f57a0c245c5a
+
+    public static void restartUI() {
+        execute(new String[] {"pkill -TERM -f com.android.systemui"}, 0);
+        execute(new String[] {"pkill -TERM -f com.android.settings"}, 0);
+    }
+
+    public static boolean execute(String[] command, int wait) {
+        if(wait!=0){
+            try {
+                Thread.sleep(wait);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        Process proc;
+        try {
+            proc = Runtime.getRuntime().exec("su");
+            DataOutputStream os = new DataOutputStream(proc.getOutputStream());
+            for (String tmpCmd : command) {
+                os.writeBytes(tmpCmd+"\n");
+            }
+            os.flush();
+            os.close();	
+            proc.waitFor();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
