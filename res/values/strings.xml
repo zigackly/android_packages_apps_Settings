@@ -4802,7 +4802,7 @@
 
     <!-- Tablet UI  -->
     <string name="tablet_ui_title">Tablet UI</string>
-    <string name="tablet_ui_summary">Use tablet style UI, not phablet or phone (requires reboot)</string>
+    <string name="tablet_ui_summary">Toggle Tablet/Phablet UI (can take 10 seconds for SystemUI to restart)</string>
 
     <string name="increasing_ring_title">Ascending ringtone</string>
     <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
