@@ -43,6 +43,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ListView;
 import android.widget.TabWidget;
+import android.provider.Settings;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -501,11 +502,16 @@ public class Utils {
             WindowManager wm = (WindowManager)con.getSystemService(Context.WINDOW_SERVICE);
             android.view.Display display = wm.getDefaultDisplay();
             int shortSize = Math.min(display.getRawHeight(), display.getRawWidth());
-            int shortSizeDp = shortSize * DisplayMetrics.DENSITY_DEFAULT / DisplayMetrics.DENSITY_DEVICE;
-            if (shortSizeDp < 600) {
+            int shortSizeDp = shortSize * DisplayMetrics.DENSITY_DEFAULT /
+                DisplayMetrics.DENSITY_DEVICE;
+
+            boolean tabletUIEnabled = (Settings.System.getInt(con.getContentResolver(),
+                Settings.System.TABLET_UI_ENABLED, 1) != 0);
+
+            if (shortSizeDp < 600 && (!tabletUIEnabled)) {
                 // 0-599dp: "phone" UI with a separate status & navigation bar
                 mDeviceType =  DEVICE_PHONE;
-            } else if (shortSizeDp < 720) {
+            } else if (shortSizeDp < 720 && (!tabletUIEnabled)) {
                 // 600-719dp: "phone" UI with modifications for larger screens
                 mDeviceType = DEVICE_HYBRID;
             } else {
