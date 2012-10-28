@@ -57,7 +57,7 @@ public class PowerMenu extends SettingsPreferenceFragment {
                 Settings.System.POWER_MENU_SCREENSHOT_ENABLED, 0) == 1));
 
         mExpandedDesktopPref = (CheckBoxPreference) findPreference(KEY_EXPANDED_DESKTOP);
-        boolean showExpandedDesktopPref = 
+        boolean showExpandedDesktopPref =
             getResources().getBoolean(R.bool.config_show_expandedDesktop);
         if (!showExpandedDesktopPref) {
             if (mExpandedDesktopPref != null) {
