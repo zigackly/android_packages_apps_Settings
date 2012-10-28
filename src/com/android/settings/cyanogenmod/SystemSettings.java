@@ -23,11 +23,9 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.IWindowManager;
 
@@ -43,14 +41,11 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private static final String KEY_NOTIFICATION_DRAWER = "notification_drawer";
     private static final String KEY_NOTIFICATION_DRAWER_TABLET = "notification_drawer_tablet";
     private static final String KEY_NAVIGATION_BAR = "navigation_bar";
-
     private static final String KEY_HARDWARE_KEYS = "hardware_keys";
 
     private ListPreference mFontSizePref;
     private PreferenceScreen mPhoneDrawer;
     private PreferenceScreen mTabletDrawer;
-
-    private Context mContext;
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -65,14 +60,14 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         mPhoneDrawer = (PreferenceScreen) findPreference(KEY_NOTIFICATION_DRAWER);
         mTabletDrawer = (PreferenceScreen) findPreference(KEY_NOTIFICATION_DRAWER_TABLET);
 
-        mContext = getActivity().getApplicationContext();
-
-        boolean tabletUIEnabled = (Settings.System.getInt(mContext.getContentResolver(), Settings.System.TABLET_UI_ENABLED, 1) != 0);
-
-        if (tabletUIEnabled) {
-            getPreferenceScreen().removePreference(mPhoneDrawer);
+        if (Utils.isTablet(getActivity())) {
+            if (mPhoneDrawer != null) {
+                getPreferenceScreen().removePreference(mPhoneDrawer);
+            }
         } else {
-            getPreferenceScreen().removePreference(mTabletDrawer);
+            if (mTabletDrawer != null) {
+                getPreferenceScreen().removePreference(mTabletDrawer);
+            }
         }
 
         IWindowManager windowManager = IWindowManager.Stub.asInterface(
@@ -158,3 +153,4 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         return true;
     }
 }
+
