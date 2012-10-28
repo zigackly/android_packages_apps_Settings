@@ -183,6 +183,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             value = mTabletUIEnabled.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.TABLET_UI_ENABLED, value ? 1 : 0);
+            Utils.restartUI();
             return true;
         }
         return false;
