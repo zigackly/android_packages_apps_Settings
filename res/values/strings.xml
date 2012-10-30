@@ -4800,10 +4800,6 @@
     <string name="status_bar_notif_count_title">Show notification count</string>
     <string name="status_bar_notif_count_summary">Display number of pending notifications</string>
 
-    <!-- Tablet UI  -->
-    <string name="tablet_ui_title">Tablet UI</string>
-    <string name="tablet_ui_summary">Toggle Tablet/Phablet UI (can take 10 seconds for SystemUI to restart)</string>
-
     <string name="increasing_ring_title">Ascending ringtone</string>
     <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
     <string name="checkbox_increasing_ring">Enable</string>
@@ -4932,6 +4928,13 @@
     <string name="sms_security_check_limit_title">SMS message limit</string>
     <string name="sms_security_check_limit_summary">Display an alert dialog to prevent applications from sending SMS messages too frequently. Current limit: %d messages in 15 minutes</string>
     <string name="sms_security_check_limit_default">30 (Default)</string>
+
+    <!-- Tablet UI -->
+    <string name="tablet_ui_settings_title">@string/tablet_ui_title</string>
+    <string name="tablet_ui_title">Tablet UI</string>
+    <string name="tablet_ui_mode_title">Tablet UI Mode</string>
+    <string name="toggle_tablet_ui_title">Toggle Tablet UI</string>
+    <string name="toggle_tablet_ui_summary">Toggle Tablet/Phablet UI (can take 10 seconds for System UI to restart)</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
