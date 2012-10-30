@@ -40,7 +40,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String STATUS_BAR_SIGNAL = "status_bar_signal";
     private static final String COMBINED_BAR_AUTO_HIDE = "combined_bar_auto_hide";
     private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
-    private static final String TABLET_UI_ENABLED = "tablet_ui_enabled";
     private static final String STATUS_BAR_CATEGORY_GENERAL = "status_bar_general";
 
     private ListPreference mStatusBarAmPm;
@@ -50,7 +49,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private CheckBoxPreference mStatusBarBrightnessControl;
     private CheckBoxPreference mCombinedBarAutoHide;
     private CheckBoxPreference mStatusBarNotifCount;
-    private CheckBoxPreference mTabletUIEnabled;
     private PreferenceCategory mPrefCategoryGeneral;
 
     @Override
@@ -116,10 +114,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarNotifCount.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
                 Settings.System.STATUS_BAR_NOTIF_COUNT, 0) == 1));
 
-        mTabletUIEnabled = (CheckBoxPreference) prefSet.findPreference(TABLET_UI_ENABLED);
-        mTabletUIEnabled.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-            Settings.System.TABLET_UI_ENABLED, 1) == 1));
-
         mPrefCategoryGeneral = (PreferenceCategory) findPreference(STATUS_BAR_CATEGORY_GENERAL);
 
         if (Utils.isTablet(getActivity())) {
@@ -178,12 +172,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             value = mStatusBarNotifCount.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_NOTIF_COUNT, value ? 1 : 0);
-            return true;
-        } else if (preference == mTabletUIEnabled) {
-            value = mTabletUIEnabled.isChecked();
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.TABLET_UI_ENABLED, value ? 1 : 0);
-            Utils.restartUI();
             return true;
         }
         return false;

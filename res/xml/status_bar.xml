@@ -72,12 +72,6 @@
             android:summary="@string/status_bar_notif_count_summary"
             android:defaultValue="false" />
 
-        <CheckBoxPreference
-            android:key="tablet_ui_enabled"
-            android:title="@string/tablet_ui_title"
-            android:summary="@string/tablet_ui_summary"
-            android:defaultValue="true" />
-
     </PreferenceCategory>
 
 </PreferenceScreen>
