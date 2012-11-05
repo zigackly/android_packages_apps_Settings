@@ -4941,12 +4941,26 @@
     <string name="sms_security_check_limit_summary">Display an alert dialog to prevent applications from sending SMS messages too frequently. Current limit: %d messages in 15 minutes</string>
     <string name="sms_security_check_limit_default">30 (Default)</string>
 
-    <!-- Tablet UI -->
+    <!-- User Interface -->
     <string name="tablet_ui_settings_title">@string/tablet_ui_title</string>
-    <string name="tablet_ui_title">Tablet UI</string>
+    <string name="tablet_ui_title">User Interface</string>
     <string name="tablet_ui_mode_title">Tablet UI Mode</string>
     <string name="toggle_tablet_ui_title">Toggle Tablet UI</string>
     <string name="toggle_tablet_ui_summary">Toggle Tablet/Phablet UI (can take 10 seconds for System UI to restart)</string>
+    <string name="dpi_settings_title">LCD density</string>
+    <string name="system_dpi_title">LCD density (requires reboot)</string>
+    <string name="system_dpi_summary">Current LCD density:</string>
+    <string name="system_dpi_standard_title">Standard density</string>
+    <string name="system_dpi_standard_dialog_title">Standard density (requires reboot)</string>
+    <string name="system_dpi_standard_summary">Select density from list</string>
+    <string name="system_dpi_custom_title">Specify custom density</string>
+    <string name="system_dpi_custom_dialog_title">Specify custom density (requires reboot)</string>
+    <string name="system_dpi_custom_hint">180 to 280 (requires reboot)</string>
 
-    <!-- **** CYANOGENMOD ADDITIONS END **** -->
+    <!-- Reboot dialogue -->
+    <string name="alert_reboot">Reboot needed</string>
+    <string name="alert_reboot_message">This change needs a reboot to be applied. Do you want to reboot now?</string>
+    <string name="alert_yes">Yes</string>
+    <string name="alert_no">No</string>
+
 </resources>

@@ -1486,5 +1486,20 @@
         <item>1000</item>
     </string-array>
 
-    <!-- **** CYANOGENMOD EDITS END **** -->
+    <string-array name="entries_dpi_system_window">
+        <item>180 dpi</item>
+        <item>200 dpi</item>
+        <item>213 dpi (factory)</item>
+        <item>240 dpi</item>
+        <item>280 dpi</item>
+    </string-array>
+
+    <string-array name="values_dpi_system_window" translatable="false">
+        <item>180</item>
+        <item>200</item>
+        <item>213</item>
+        <item>240</item>
+        <item>280</item>
+    </string-array>
+
 </resources>
