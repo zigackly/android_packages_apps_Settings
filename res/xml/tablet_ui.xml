@@ -28,6 +28,12 @@
             android:summary="@string/toggle_tablet_ui_summary"
             android:defaultValue="true" />
 
+        <CheckBoxPreference
+            android:key="tablet_apps_enabled"
+            android:title="@string/toggle_tablet_apps_title"
+            android:summary="@string/toggle_tablet_apps_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
