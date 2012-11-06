@@ -4919,6 +4919,8 @@
     <string name="tablet_ui_mode_title">Tablet UI Mode</string>
     <string name="toggle_tablet_ui_title">Toggle Tablet UI</string>
     <string name="toggle_tablet_ui_summary">Toggle Tablet/Phablet UI (can take 10 seconds for System UI to restart)</string>
+    <string name="toggle_tablet_apps_title">Tablet apps mode</string>
+    <string name="toggle_tablet_apps_summary">Toggle tablet style apps"</string>
     <string name="dpi_settings_title">LCD density</string>
     <string name="system_dpi_title">LCD density (requires reboot)</string>
     <string name="system_dpi_summary">Current LCD density:</string>

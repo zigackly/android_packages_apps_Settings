@@ -39,18 +39,17 @@ import com.android.settings.Utils;
 
 public class TabletUI extends SettingsPreferenceFragment implements OnPreferenceChangeListener, OnPreferenceClickListener {
 
-    private static final String TABLET_UI_ENABLED = "tablet_ui_enabled";
     private static final String TABLET_UI_CATEGORY_MODE = "tablet_ui_mode";
-
-    private CheckBoxPreference mTabletUIEnabled;
-    private PreferenceCategory mPrefCategoryMode;
-
+    private static final String TABLET_UI_ENABLED = "tablet_ui_enabled";
+    private static final String TABLET_APPS_ENABLED = "tablet_apps_enabled";
     private static final String PROPERTY = "ro.sf.lcd_density";
     private static final String TAG = "zigackly/Dpi";
-
     private static final String DPI_PREF = "system_dpi_window";
     private static final String CUSTOM_DPI_PREF = "custom_dpi_text";
 
+    private CheckBoxPreference mTabletUIEnabled;
+    private CheckBoxPreference mTabletAppsEnabled;
+    private PreferenceCategory mPrefCategoryMode;
     private ListPreference mDpiWindow;
     private EditTextPreference mCustomDpi;
     private Context mContext;
@@ -73,6 +72,11 @@ public class TabletUI extends SettingsPreferenceFragment implements OnPreference
         mTabletUIEnabled.setChecked((
             Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
             Settings.System.TABLET_UI_ENABLED, 1) == 1));
+
+        mTabletAppsEnabled = (CheckBoxPreference) prefSet.findPreference(TABLET_APPS_ENABLED);
+        mTabletAppsEnabled.setChecked((
+            Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+            Settings.System.TABLET_APPS_ENABLED, 1) == 1));
 
         mPrefCategoryMode = (PreferenceCategory) findPreference(TABLET_UI_CATEGORY_MODE);
 
@@ -132,7 +136,12 @@ public class TabletUI extends SettingsPreferenceFragment implements OnPreference
                     Settings.System.TABLET_UI_ENABLED, value ? 1 : 0);
             Utils.restartUI();
             return true;
-        } 
+        } else if (preference == mTabletAppsEnabled) {
+            value = mTabletAppsEnabled.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.TABLET_APPS_ENABLED, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 }
